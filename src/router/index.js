@@ -4,6 +4,7 @@ import Main from '@/components/Main'
 import Quiz from '@/components/games/quiz/Main'
 import OneToFifty from '@/components/games/1to50/Main'
 import Bubble from '@/components/games/bubble/Main'
+import Pingpong from '@/components/games/pingpong/Main'
 
 Vue.use(Router)
 
@@ -12,7 +13,7 @@ export default new Router({
   routes: [
     {
       path: '/',
-      redirect: '/home'
+      redirect: '/best'
     },
     {
       path: '/index.html',
@@ -31,6 +32,11 @@ export default new Router({
     {
       path: '/game/bubble',
       component: Bubble,
+      props: true
+    },
+    {
+      path: '/game/pingpong',
+      component: Pingpong,
       props: true
     },
     {

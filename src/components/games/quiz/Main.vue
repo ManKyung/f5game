@@ -17,11 +17,11 @@
                     <div class="pa-5 text-lg-center">
                         <v-btn fab dark small color="primary" @click="add('말')"><strong>말</strong></v-btn>
                         <v-btn fab dark small color="primary" @click="add('죽')">죽</v-btn>
-                        <v-btn fab dark small color="primary" @click="add('거')">거</v-btn>
-                        <v-btn fab dark small color="primary" @click="add('리')">리</v-btn>
-                        <v-btn fab dark small color="primary" @click="add('잔')">잔</v-btn>
                         <v-btn fab dark small color="primary" @click="add('혹')">혹</v-btn>
+                        <v-btn fab dark small color="primary" @click="add('잔')">잔</v-btn>
+                        <v-btn fab dark small color="primary" @click="add('거')">거</v-btn>
                         <v-btn fab dark small color="primary" @click="add('사')">사</v-btn>
+                        <v-btn fab dark small color="primary" @click="add('리')">리</v-btn>
                     </div>
 
 

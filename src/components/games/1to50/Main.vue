@@ -1,14 +1,12 @@
 <template>
     <v-container>
-        <!-- <v-layout wrap text-xs-center v-if="!isStart">
-            <v-flex xs12 sm8 offset-sm2 md6 offset-md3 lg4 offset-lg4>
-                <v-btn class="pa-5" block color="green lighten-2" dark @click="startHandler">START</v-btn>
-            </v-flex>
-        </v-layout> -->
-        <v-toolbar app color="pink lighten-2">
+        <v-toolbar app color="green lighten-2">
             <img class="ml-2" src="/static/img/1to50.png" height='32'>
             <v-spacer></v-spacer>
 
+            <v-btn dark icon @click="startHandler">
+                <v-icon>fullscreen</v-icon>
+            </v-btn>
           <v-menu bottom left>
             <v-btn slot="activator" dark icon>
                 <v-icon>more_vert</v-icon>
@@ -48,12 +46,12 @@
                         </v-flex>
                     </v-layout>
                 </v-card>
-                    <Adsense 
+                    <!-- <Adsense 
         data-ad-client="ca-pub-1963334904140891"
         data-ad-slot="5276553934"
         data-ad-format="auto"
         data-full-width-responsive="true">
-                    </Adsense>
+                    </Adsense> -->
             </v-flex>
         </v-layout>
     </v-container>
@@ -228,20 +226,19 @@ export default {
                 elem.msRequestFullscreen();
                 }
             }
-            // else{
-            //     if (document.exitFullscreen) {
-            //     document.exitFullscreen();
-            //     } else if (document.mozCancelFullScreen) { /* Firefox */
-            //     document.mozCancelFullScreen();
-            //     } else if (document.webkitExitFullscreen) { /* Chrome, Safari and Opera */
-            //     document.webkitExitFullscreen();
-            //     } else if (document.msExitFullscreen) { /* IE/Edge */
-            //     document.msExitFullscreen();
-            //     }
-            // }
+            else{
+                if (document.exitFullscreen) {
+                document.exitFullscreen();
+                } else if (document.mozCancelFullScreen) { /* Firefox */
+                document.mozCancelFullScreen();
+                } else if (document.webkitExitFullscreen) { /* Chrome, Safari and Opera */
+                document.webkitExitFullscreen();
+                } else if (document.msExitFullscreen) { /* IE/Edge */
+                document.msExitFullscreen();
+                }
+            }
             this.isFullScreen = !this.isFullScreen;
             this.isStart = true;
-
         }
     },
     beforeDestroy() {
